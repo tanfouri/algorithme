@@ -1,0 +1,28 @@
+ALGORITHM algorithm_name
+VAR
+    i, kk: STRING;  // Use STRING type instead of CHAR
+    v: INTEGER := 0;
+    k: INTEGER := 0;
+    s: INTEGER := 0;
+
+BEGIN
+    Read(kk);
+
+    WHILE (i != ".") DO
+        Read(i);  // Read character by character
+
+        v += 1;
+        IF (i = " ") THEN
+            k += 1;
+        ELSE
+            IF (i = "a" || i = "e" || i = "y" || i = "i" || i = "o" || i = "u") THEN
+                s += 1;
+            END_IF;
+        END_IF;
+    END_WHILE;
+
+    Write("the number of characters is ", v);
+    Write("the number of words is ", k);
+    Write("the number of vowels is ", s);
+
+END.
